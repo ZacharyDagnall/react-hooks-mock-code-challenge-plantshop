@@ -4,7 +4,7 @@ import PlantCard from "./PlantCard";
 function PlantList({plants, search, setPlants}) {
   
   const filPlants = plants.filter((plant)=>{
-    return plant.name.includes(search)
+    return plant.name.toLowerCase().includes(search.toLowerCase())
   })
   
   function handleDelete(id){
